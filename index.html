@@ -17,7 +17,6 @@
     <header class="header block__size">
       <a class="header__logo">&lt;/html&gt;</a>
       <h1 class="header__title">закрывающий тег</h1>
-      <nav class="theme-menu header__theme-menu"></nav>
     </header>
     <main>
 
@@ -36,16 +35,16 @@
             <p class="card_paragraph">
               Очень тернистый путь к новомым открытиям.
             </p>
-            <div class="card__buttons"  aria-hidden="true">
+            <div class="card__buttons">
               <button class="card__icon-button" type="button">
-                <svg
-                  class="like-icon" 
+                <svg 
                   width="39" 
                   height="36" 
                   viewBox="0 0 39 36" 
                   xmlns="http://www.w3.org/2000/svg">
                   <g class="heart">
                     <path
+                      aria-hidden="true"
                       class="contour"
                       fill="var(--contour-color)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 
@@ -493,7 +492,6 @@
         </li>
       </ul>
 
-      <section>
         <button 
           class="button save-button" 
           type="button"
@@ -510,7 +508,7 @@
             <svg class="floppy-icon modal-icon" width="100%" height="100%" viewBox="0 0 39 39">
               <use href="./svg/floppy.svg#floppy"></use>
             </svg>
-            <p class="modal-text">вставьте<br>дискету, чтобы<br>продолжить</p>
+            <p class="modal-text">вставьте дискету, чтобы продолжить</p>
           </div>
           <form  class="modal-form" method="dialog">
             <button class="button modal-button" type="submit">
@@ -518,7 +516,6 @@
             </button>
           </form>  
         </dialog>
-      </section>
     </main>
     <script src="./scripts/like.js"></script>
   </body>
