@@ -13,7 +13,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font, "Inter-Variable") sans-serif;
+  font-family: var(--main-font, "Inter-Variable"), sans-serif;
   color: var(--accent-color, #000);
   font-variation-settings: "wght" var(--card-text-fw, 400);
   background-image: var(
@@ -234,6 +234,7 @@
 
 .card__icon-button:focus-visible {
   border-color: var(--accent-color, #000);
+  transition: border-color 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -241,64 +242,76 @@
 }
 
 .like-icon {
-  display: block;
+  align-self: center;
 }
 
-.save-button {
+.save_section {
+  padding-bottom: 100px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 0 auto 100px;
+}
+
+.save_button {
+  display: flex;
+  justify-content: center;
   gap: 8px;
   inline-size: 335px;
   block-size: 55px;
+  padding-inline: 0px;
+  align-items: center;
 }
 
-.floppy-icon {
-  position: relative;
-  display: block;
+.floppy {
   block-size: 21px;
   inline-size: 21px;
-  margin-block-end: 1px;
+  color: #fff;
   mix-blend-mode: difference;
-  z-index: 1;
 }
 
-.modal-form {
-  inline-size: 293px;
-}
-
-.modal-button {
-  block-size: 38px;
-  inline-size: 100%;
-}
-.modal-button:focus {
-  box-shadow: none;
-}
-
-.modal-button:focus-visible {
-  box-shadow: 2px 2px 0 var(--accent-color, #000);
-}
-
-.modal-container {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  inline-size: 100%;
-  gap: 20px;
-}
-
-.modal-icon {
+.dialog_floppy {
   block-size: 39px;
   inline-size: 39px;
-  mix-blend-mode: normal;
+  color: #fff;
+  mix-blend-mode: difference;
+  flex-shrink: 0;
 }
 
-.modal-text {
-  font-family: var(--accent-font, "PressStart2P"), fantasy;
+.dialog_save[open] .dialog_section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 30px;
+  padding-top: 5px;
+}
+
+.dialog_save[open] {
+  padding: 30px;
+  inline-size: clamp(341px, calc(337px + 1.13vw), 353px);
+  border: 2px solid var(--border-color);
+}
+
+.dialog_save[open]::backdrop {
+  background: #000;
+  opacity: 0.75;
+}
+
+.dialog__text {
+  color: var(--bg-color);
+  transition: color 0.5s ease;
+  mix-blend-mode: difference;
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
-  text-transform: uppercase;
-  line-height: 1.5;
+  text-transform: inherit;
+  font-weight: var(--card-text-fw), 400;
+  line-height: 150%;
+  text-align: left;
+  width: fit-content;
+  align-self: flex-start;
+}
+
+.dialog_close {
+  inline-size: 100%;
+  min-block-size: 38px;
 }
 
 @media (width <= 375px) {
@@ -312,24 +325,15 @@
     inset-inline-end: 13px;
   }
 
-  .save-button {
+  .save_button {
     flex-direction: column;
-    inline-size: 310px;
-    block-size: 84px;
     gap: 8px;
+    width: 312px;
+    height: 84px;
   }
 
-  .floppy-icon {
+  .floppy {
     block-size: 28px;
     inline-size: 28px;
-  }
-
-  .modal-icon {
-    block-size: 39px;
-    inline-size: 39px;
-  }
-
-  .modal-form {
-    inline-size: 100%;
   }
 }

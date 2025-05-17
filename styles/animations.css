@@ -70,6 +70,7 @@
   animation-direction: normal;
   transform-origin: center;
   animation-timing-function: ease-in;
+  animation-iteration-count: 1;
 }
 
 .is-liked .sparks {
@@ -79,6 +80,17 @@
   animation-direction: normal;
   transform-origin: center;
   animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes pointer {
+  0% {
+    inset-inline-start: -20px;
+  }
+
+  100% {
+    inset-inline-start: -16px;
+  }
 }
 
 @keyframes heart {

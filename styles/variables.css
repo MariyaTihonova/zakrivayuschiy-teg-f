@@ -4,9 +4,9 @@
   --accent-font: "PressStart2P";
   --card-title-fw: 700;
   --card-text-fw: 400;
-  --button-font-size: 14px;
   --bg-color: #fff;
   --accent-color: #000;
+  --border-color: #000000;
   --bg-image: repeating-linear-gradient(
       to bottom,
       #d3d3d3 0 2px,
