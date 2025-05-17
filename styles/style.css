@@ -307,6 +307,7 @@
   text-align: left;
   width: fit-content;
   align-self: flex-start;
+  text-transform: uppercase;
 }
 
 .dialog_close {
